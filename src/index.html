@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>Bear Power!</title>
+
+    <!-- <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"
+      rel="stylesheet"
+    /> -->
+
+    <link rel="stylesheet" href="/input.css" />
+  </head>
+  <body
+    class="overflow-x-hidden overflow-y-scroll text-white motion-safe:animate-body bg-gradient-to-br from-[#191919] via-[#1f1e1e] to-[#262424]"
+  >
+    <nav
+      class="min-w-full h-16 p-8 bg-none flex items-center justify-between text-3xl"
+    >
+      <h1
+        class="text-gray-400 hover:cursor-pointer hover:underline underline-offset-4 text-3xl"
+      >
+        Bear Power!
+      </h1>
+
+      <button type="button" onclick="showNavbar()" class="z-20 fixed right-10">
+        <i
+          class="fa-solid fa-bars text-gray-300 hidden xl:invisible xl:hidden"
+        ></i>
+      </button>
+
+      <ul
+        id="navbar"
+        class="justify-center items-center text-gray-300 gap-2 text-lg hidden xl:visible xl:flex"
+      >
+        <li class="m-4 hover:cursor-pointer hover:underline underline-offset-4">
+          <a class="decoration-inherit" href="#home">Home</a>
+        </li>
+        <li class="m-4 hover:cursor-pointer hover:underline underline-offset-4">
+          <a class="decoration-inherit" href="#best-offers">Best offers</a>
+        </li>
+        <li class="m-4 hover:cursor-pointer hover:underline underline-offset-4">
+          <a class="decoration-inherit" href="#menu">Menu</a>
+        </li>
+        <li class="m-4 hover:cursor-pointer hover:underline underline-offset-4">
+          <a class="decoration-inherit" href="#about-us">About us</a>
+        </li>
+        <li class="m-4 max-w-min relative flex justify-center items-center">
+          <i
+            class="fa-solid fa-cart-shopping text-gray-300 hover:cursor-pointer text-xl m-0 ml-0"
+          ></i>
+        </li>
+      </ul>
+    </nav>
+
+    <section
+      id="home"
+      class="mx-4 xl:mx-16 2xl:mx-32 mt-64 h-auto border-r-2 border-r-gray-400 border-b-2 border-b-gray-400 rounded-br-lg"
+    >
+      <div id="wrapper" class="h-auto min-w-full pt-10">
+        <div
+          id="content"
+          class="flex justify-evenly items-center flex-col gap-16 2xl:gap-5 xl:flex-row"
+          style="padding-bottom: 12rem; padding-top: 5rem"
+        >
+          <div id="hero" class="p-3">
+            <h1 class="text-4xl mb-5 w-auto">Bear power!</h1>
+            <p class="text-2xl mb-2 w-auto">
+              We are one of the best providers for all fitness enthusiasts.
+            </p>
+            <p class="text-2xl mb-2">Buy from us now, and become a unit!</p>
+          </div>
+
+          <img
+            src="./images/image1.jpg"
+            alt="..."
+            class="w-[75%] sm:w-[75%] xl:[w-50%] 2xl:w-[25%] max-w-[720px]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="mx-4 xl:mx-16 2xl:mx-32 h-auto border-l-2 border-l-gray-400 border-b-2 border-b-gray-400 rounded-bl-lg flex flex-col justify-center items-center py-64"
+    >
+      <h1 class="text-3xl mb-24" id="best-offers">Our best offers for you!</h1>
+      <div
+        class="carousel relative flex flex-col items-center justify-center border-b-2 border-t-2 rounded-b-lg rounded-t-lg py-16 border-slate-500 min-w-[80%]"
+      >
+        <div
+          class="image-wrapper flex justify-center items-center overflow-hidden"
+        >
+          <!-- Image 1  -->
+
+          <div
+            class="m-0 justify-center items-center flex-col gap-4 xl:gap-16 flex"
+            data-image-index="1"
+          >
+            <img
+              src="./images/image1.jpg"
+              alt=""
+              class="w-[55%] sm:w-[75%] xl:[w-100%] 2xl:w-[100%] max-w-[720px] max-h-[720px]"
+            />
+            <div
+              id="liveAlertPlaceholder"
+              class="w-full max-w-[50%] block sm:absolute sm:top-[75%] md:top-[80%]"
+            ></div>
+            <button
+              type="button"
+              onclick="pushAlert(this)"
+              data-price="49.99"
+              id="liveAlertBtn"
+              class="bg-gray-800 font-medium rounded-lg text-xl px-5 py-2.5 mb-2 block sm:absolute top-[82.5%] sm:top-[90%]"
+            >
+              Purchase now
+            </button>
+          </div>
+
+          <!-- Image 2  -->
+
+          <div
+            class="m-0 justify-center items-center flex-col gap-4 lg:gap-16 hidden"
+            data-image-index="2"
+          >
+            <img
+              src="./images/image2.jpg"
+              alt=""
+              class="w-[55%] sm:w-[75%] xl:[w-100%] 2xl:w-[100%] max-w-[720px] max-h-[720px]"
+            />
+            <div
+              id="liveAlertPlaceholder"
+              class="w-full max-w-[50%] block sm:absolute sm:top-[80%]"
+            ></div>
+            <button
+              type="button"
+              onclick="pushAlert(this)"
+              data-price="52.99"
+              id="liveAlertBtn"
+              class="bg-gray-800 font-medium rounded-lg text-xl px-5 py-2.5 mb-2"
+            >
+              Purchase now
+            </button>
+          </div>
+
+          <!-- Image 3  -->
+
+          <div
+            class="m-0 justify-center items-center flex-col gap-4 xl:gap-16 hidden"
+            data-image-index="3"
+          >
+            <img
+              src="./images/image3.jpg"
+              alt=""
+              class="w-[55%] sm:w-[75%] xl:[w-100%] 2xl:w-[100%] max-w-[720px] max-h-[720px]"
+            />
+            <div
+              id="liveAlertPlaceholder"
+              class="w-full max-w-[50%] block sm:absolute sm:top-[80%]"
+            ></div>
+            <button
+              type="button"
+              onclick="pushAlert(this)"
+              data-price="32.99"
+              id="liveAlertBtn"
+              class="bg-gray-800 font-medium rounded-lg text-xl px-5 py-2.5 mb-2"
+            >
+              Purchase now
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="controls absolute top-[50%] flex justify-between min-w-[85%]"
+        >
+          <button class="" onclick="changeToLeft()">
+            <i class="fa-solid fa-arrow-left text-4xl text-gray-400"></i>
+          </button>
+          <button class="" onclick="changeToRight()">
+            <i class="fa-solid fa-arrow-right text-4xl text-gray-400"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="menu"
+      class="mx-4 xl:mx-16 2xl:mx-32 h-auto border-r-2 border-r-gray-400 border-b-2 border-b-gray-400 rounded-br-lg py-64"
+    >
+      <div id="menu-items-wrapper">
+        <ul
+          class="text-white grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 grid-flow-row gap-4 gap-y-10 place-items-center w-full"
+        >
+          <li
+            class="flex justify-center border-2 border-slate-400 rounded-lg max-w-sm"
+          >
+            <div class="block p-6 rounded-lg relative">
+              <img src="./images/image1.jpg" alt="" class="mb-6 w-[100%]" />
+              <h5 class="text-xl leading-tight font-medium mb-2">
+                Sour Gummy Bear Preworkout
+              </h5>
+              <p class="text-base mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <div id="liveAlertPlaceholder" class="w-full max-w-[100%]"></div>
+              <button
+                type="button"
+                onclick="pushAlert(this)"
+                data-price="32.99"
+                id="liveAlertBtn"
+                class="bg-gray-800 font-medium rounded-lg text-xl px-5 py-2.5 mb-2 w-[100%]"
+              >
+                Purchase now
+              </button>
+            </div>
+          </li>
+          <li
+            class="flex justify-center border-2 border-slate-400 rounded-lg max-w-sm"
+          >
+            <div class="block p-6 rounded-lg relative">
+              <img src="./images/image2.jpg" alt="" class="mb-6 w-[100%]" />
+              <h5 class="text-xl leading-tight font-medium mb-2">
+                Blue lemonade Preworkout
+              </h5>
+              <p class="text-base mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <div id="liveAlertPlaceholder" class="w-full max-w-[100%]"></div>
+              <button
+                type="button"
+                onclick="pushAlert(this)"
+                data-price="32.99"
+                id="liveAlertBtn"
+                class="bg-gray-800 font-medium rounded-lg text-xl px-5 py-2.5 mb-2 w-[100%]"
+              >
+                Purchase now
+              </button>
+            </div>
+          </li>
+          <li
+            class="flex justify-center border-2 border-slate-400 rounded-lg max-w-sm"
+          >
+            <div class="block p-6 rounded-lg relative">
+              <img src="./images/image3.jpg" alt="" class="mb-6 w-[100%]" />
+              <h5 class="text-xl leading-tight font-medium mb-2">
+                Green Apple Preworkout
+              </h5>
+              <p class="text-base mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <div id="liveAlertPlaceholder" class="w-full max-w-[100%]"></div>
+              <button
+                type="button"
+                onclick="pushAlert(this)"
+                data-price="32.99"
+                id="liveAlertBtn"
+                class="bg-gray-800 font-medium rounded-lg text-xl px-5 py-2.5 mb-2 w-[100%]"
+              >
+                Purchase now
+              </button>
+            </div>
+          </li>
+          <li
+            class="flex justify-center border-2 border-slate-400 rounded-lg max-w-sm"
+          >
+            <div class="block p-6 rounded-lg relative">
+              <img src="./images/image4.jpg" alt="" class="mb-6 w-[100%]" />
+              <h5 class="text-xl leading-tight font-medium mb-2">
+                Strawberry Preworkout
+              </h5>
+              <p class="text-base mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <div id="liveAlertPlaceholder" class="w-full max-w-[100%]"></div>
+              <button
+                type="button"
+                onclick="pushAlert(this)"
+                data-price="32.99"
+                id="liveAlertBtn"
+                class="bg-gray-800 font-medium rounded-lg text-xl px-5 py-2.5 mb-2 w-[100%]"
+              >
+                Purchase now
+              </button>
+            </div>
+          </li>
+          <li
+            class="flex justify-center border-2 border-slate-400 rounded-lg max-w-sm"
+          >
+            <div class="block p-6 rounded-lg relative">
+              <img src="./images/image5.jpg" alt="" class="mb-6 w-[100%]" />
+              <h5 class="text-xl leading-tight font-medium mb-2">
+                Sour Strawberry Preworkout
+              </h5>
+              <p class="text-base mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <div id="liveAlertPlaceholder" class="w-full max-w-[100%]"></div>
+              <button
+                type="button"
+                onclick="pushAlert(this)"
+                data-price="32.99"
+                id="liveAlertBtn"
+                class="bg-gray-800 font-medium rounded-lg text-xl px-5 py-2.5 mb-2 w-[100%]"
+              >
+                Purchase now
+              </button>
+            </div>
+          </li>
+          <li
+            class="flex justify-center border-2 border-slate-400 rounded-lg max-w-sm"
+          >
+            <div class="block p-6 rounded-lg relative">
+              <img src="./images/image1.jpg" alt="" class="mb-6 w-[100%]" />
+              <h5 class="text-xl leading-tight font-medium mb-2">
+                Sour Gummy Bear Preworkout
+              </h5>
+              <p class="text-base mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <div id="liveAlertPlaceholder" class="w-full max-w-[100%]"></div>
+              <button
+                type="button"
+                onclick="pushAlert(this)"
+                data-price="32.99"
+                id="liveAlertBtn"
+                class="bg-gray-800 font-medium rounded-lg text-xl px-5 py-2.5 mb-2 w-[100%]"
+              >
+                Purchase now
+              </button>
+            </div>
+          </li>
+          <li
+            class="flex justify-center border-2 border-slate-400 rounded-lg max-w-sm"
+          >
+            <div class="block p-6 rounded-lg relative">
+              <img src="./images/image2.jpg" alt="" class="mb-6 w-[100%]" />
+              <h5 class="text-xl leading-tight font-medium mb-2">
+                Blue lemonade Preworkout
+              </h5>
+              <p class="text-base mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <div id="liveAlertPlaceholder" class="w-full max-w-[100%]"></div>
+              <button
+                type="button"
+                onclick="pushAlert(this)"
+                data-price="32.99"
+                id="liveAlertBtn"
+                class="bg-gray-800 font-medium rounded-lg text-xl px-5 py-2.5 mb-2 w-[100%]"
+              >
+                Purchase now
+              </button>
+            </div>
+          </li>
+          <li
+            class="flex justify-center border-2 border-slate-400 rounded-lg max-w-sm"
+          >
+            <div class="block p-6 rounded-lg relative">
+              <img src="./images/image3.jpg" alt="" class="mb-6 w-[100%]" />
+              <h5 class="text-xl leading-tight font-medium mb-2">
+                Green Apple Preworkout
+              </h5>
+              <p class="text-base mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <div id="liveAlertPlaceholder" class="w-full max-w-[100%]"></div>
+              <button
+                type="button"
+                onclick="pushAlert(this)"
+                data-price="32.99"
+                id="liveAlertBtn"
+                class="bg-gray-800 font-medium rounded-lg text-xl px-5 py-2.5 mb-2 w-[100%]"
+              >
+                Purchase now
+              </button>
+            </div>
+          </li>
+          <li
+            class="flex justify-center border-2 border-slate-400 rounded-lg max-w-sm"
+          >
+            <div class="block p-6 rounded-lg relative">
+              <img src="./images/image4.jpg" alt="" class="mb-6 w-[100%]" />
+              <h5 class="text-xl leading-tight font-medium mb-2">
+                Strawberry Preworkout
+              </h5>
+              <p class="text-base mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <div id="liveAlertPlaceholder" class="w-full max-w-[100%]"></div>
+              <button
+                type="button"
+                onclick="pushAlert(this)"
+                data-price="32.99"
+                id="liveAlertBtn"
+                class="bg-gray-800 font-medium rounded-lg text-xl px-5 py-2.5 mb-2 w-[100%]"
+              >
+                Purchase now
+              </button>
+            </div>
+          </li>
+          <li
+            class="flex justify-center border-2 border-slate-400 rounded-lg max-w-sm"
+          >
+            <div class="block p-6 rounded-lg relative">
+              <img src="./images/image5.jpg" alt="" class="mb-6 w-[100%]" />
+              <h5 class="text-xl leading-tight font-medium mb-2">
+                Sour Strawberry Preworkout
+              </h5>
+              <p class="text-base mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <div id="liveAlertPlaceholder" class="w-full max-w-[100%]"></div>
+              <button
+                type="button"
+                onclick="pushAlert(this)"
+                data-price="32.99"
+                id="liveAlertBtn"
+                class="bg-gray-800 font-medium rounded-lg text-xl px-5 py-2.5 mb-2 w-[100%]"
+              >
+                Purchase now
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section
+      id="about-us"
+      class="mx-4 xl:mx-16 2xl:mx-32 h-auto border-l-2 border-l-gray-400 border-b-2 border-b-gray-400 rounded-bl-lg py-64 flex flex-col justify-between gap-24"
+    >
+      <h1 class="text-4xl text-center">About us</h1>
+      <ul
+        class="grid grid-cols-1 lg:grid-cols-2 grid-flow-row place-items-center gap-5 text-white text-2xl mx-12"
+      >
+        <li
+          class="flex justify-center border-2 border-slate-400 rounded-lg max-w-sm"
+        >
+          <div class="block p-6 rounded-lg relative">
+            <h5 class="text-xl leading-tight font-medium mb-4">Our goal</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              nihil facilis perferendis id ad sed facere minus modi, repudiandae
+              laboriosam enim expedita alias incidunt ratione voluptate soluta!
+              Earum, quos corrupti.
+            </p>
+          </div>
+        </li>
+        <li
+          class="flex justify-center border-2 border-slate-400 rounded-lg max-w-sm min-h-[345px]"
+        >
+          <div class="block p-6 rounded-lg relative">
+            <h5 class="text-xl leading-tight font-medium mb-6">Our contact</h5>
+            <div class="flex flex-col justify-start items-start gap-8">
+              <p>Email - <span class="underline">bearpower@gmail.com</span></p>
+              <p>Number - <span class="underline">+370xxxxxxxx</span></p>
+              <p>website - <span class="underline">bearpower.com</span></p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section
+      id="footer"
+      class="flex flex-row justify-center items-center text-white min-h-[100px]"
+    >
+      <h1>© 2023 Bear Power Lietuva</h1>
+    </section>
+
+    <script src="index.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
+    <script
+      src="https://kit.fontawesome.com/ee87a316b7.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
